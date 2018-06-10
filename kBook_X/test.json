@@ -1,0 +1,17 @@
+{"person":[
+    {
+        "name": "Bob",
+        "age": "16",
+        "employed": "No"
+    },
+    {
+        "name": "Vinny",
+        "age": "56",
+        "employed": "Yes"
+    },
+           {
+           "name": "Joe",
+           "age": 16,
+           "employed": true
+   }]
+}

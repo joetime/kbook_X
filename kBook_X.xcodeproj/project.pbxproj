@@ -15,6 +15,9 @@
 		89BA124C20CD9481003FCCCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89BA124A20CD9481003FCCCA /* LaunchScreen.storyboard */; };
 		89BA125720CD9481003FCCCA /* kBook_XTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BA125620CD9481003FCCCA /* kBook_XTests.swift */; };
 		89BA126220CD9481003FCCCA /* kBook_XUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BA126120CD9481003FCCCA /* kBook_XUITests.swift */; };
+		89BA127020CD95CB003FCCCA /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 89BA126F20CD95CB003FCCCA /* Podfile */; };
+		89BA127220CD9D7A003FCCCA /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 89BA127120CD9D7A003FCCCA /* test.json */; };
+		89BA127420CD9DD0003FCCCA /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BA127320CD9DD0003FCCCA /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12E2187F2BC5F70E40037436 /* Pods-kBook_X.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kBook_X.release.xcconfig"; path = "Pods/Target Support Files/Pods-kBook_X/Pods-kBook_X.release.xcconfig"; sourceTree = "<group>"; };
+		4C771F0E04D974E5088AF0ED /* Pods-kBook_X.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kBook_X.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kBook_X/Pods-kBook_X.debug.xcconfig"; sourceTree = "<group>"; };
+		4DAD1B69F1AA985C8F264558 /* Pods-kBook_XTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kBook_XTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kBook_XTests/Pods-kBook_XTests.debug.xcconfig"; sourceTree = "<group>"; };
 		89BA123C20CD9480003FCCCA /* kBook_X.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kBook_X.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89BA123F20CD9480003FCCCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89BA124120CD9480003FCCCA /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +55,12 @@
 		89BA125D20CD9481003FCCCA /* kBook_XUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kBook_XUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89BA126120CD9481003FCCCA /* kBook_XUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kBook_XUITests.swift; sourceTree = "<group>"; };
 		89BA126320CD9481003FCCCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89BA126F20CD95CB003FCCCA /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		89BA127120CD9D7A003FCCCA /* test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
+		89BA127320CD9DD0003FCCCA /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		985DB010B262D4B0202C856F /* Pods-kBook_XUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kBook_XUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kBook_XUITests/Pods-kBook_XUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AB75E8718B7F41255C156443 /* Pods-kBook_XUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kBook_XUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-kBook_XUITests/Pods-kBook_XUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C05E74623EBDAFD3781A262A /* Pods-kBook_XTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kBook_XTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-kBook_XTests/Pods-kBook_XTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,13 +88,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		77A51CAC900926D91C9C549B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4C771F0E04D974E5088AF0ED /* Pods-kBook_X.debug.xcconfig */,
+				12E2187F2BC5F70E40037436 /* Pods-kBook_X.release.xcconfig */,
+				4DAD1B69F1AA985C8F264558 /* Pods-kBook_XTests.debug.xcconfig */,
+				C05E74623EBDAFD3781A262A /* Pods-kBook_XTests.release.xcconfig */,
+				985DB010B262D4B0202C856F /* Pods-kBook_XUITests.debug.xcconfig */,
+				AB75E8718B7F41255C156443 /* Pods-kBook_XUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		89BA123320CD9480003FCCCA = {
 			isa = PBXGroup;
 			children = (
+				89BA126F20CD95CB003FCCCA /* Podfile */,
 				89BA123E20CD9480003FCCCA /* kBook_X */,
 				89BA125520CD9481003FCCCA /* kBook_XTests */,
 				89BA126020CD9481003FCCCA /* kBook_XUITests */,
 				89BA123D20CD9480003FCCCA /* Products */,
+				77A51CAC900926D91C9C549B /* Pods */,
+				AC2B908AEFC5A2EF87DF643F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +134,8 @@
 				89BA124820CD9481003FCCCA /* Assets.xcassets */,
 				89BA124A20CD9481003FCCCA /* LaunchScreen.storyboard */,
 				89BA124D20CD9481003FCCCA /* Info.plist */,
+				89BA127120CD9D7A003FCCCA /* test.json */,
+				89BA127320CD9DD0003FCCCA /* Person.swift */,
 			);
 			path = kBook_X;
 			sourceTree = "<group>";
@@ -128,6 +158,13 @@
 			path = kBook_XUITests;
 			sourceTree = "<group>";
 		};
+		AC2B908AEFC5A2EF87DF643F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +172,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 89BA126620CD9481003FCCCA /* Build configuration list for PBXNativeTarget "kBook_X" */;
 			buildPhases = (
+				674D97C7E36CE13D1E07720D /* [CP] Check Pods Manifest.lock */,
 				89BA123820CD9480003FCCCA /* Sources */,
 				89BA123920CD9480003FCCCA /* Frameworks */,
 				89BA123A20CD9480003FCCCA /* Resources */,
@@ -152,6 +190,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 89BA126920CD9481003FCCCA /* Build configuration list for PBXNativeTarget "kBook_XTests" */;
 			buildPhases = (
+				00D2A1EC294B2EC918F4C98A /* [CP] Check Pods Manifest.lock */,
 				89BA124E20CD9481003FCCCA /* Sources */,
 				89BA124F20CD9481003FCCCA /* Frameworks */,
 				89BA125020CD9481003FCCCA /* Resources */,
@@ -170,6 +209,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 89BA126C20CD9481003FCCCA /* Build configuration list for PBXNativeTarget "kBook_XUITests" */;
 			buildPhases = (
+				6F042739ED886A0E2F6D4283 /* [CP] Check Pods Manifest.lock */,
 				89BA125920CD9481003FCCCA /* Sources */,
 				89BA125A20CD9481003FCCCA /* Frameworks */,
 				89BA125B20CD9481003FCCCA /* Resources */,
@@ -234,6 +274,8 @@
 			files = (
 				89BA124C20CD9481003FCCCA /* LaunchScreen.storyboard in Resources */,
 				89BA124920CD9481003FCCCA /* Assets.xcassets in Resources */,
+				89BA127220CD9D7A003FCCCA /* test.json in Resources */,
+				89BA127020CD95CB003FCCCA /* Podfile in Resources */,
 				89BA124720CD9480003FCCCA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,6 +296,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		00D2A1EC294B2EC918F4C98A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kBook_XTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		674D97C7E36CE13D1E07720D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kBook_X-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F042739ED886A0E2F6D4283 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kBook_XUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		89BA123820CD9480003FCCCA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -261,6 +360,7 @@
 			files = (
 				89BA124420CD9480003FCCCA /* DetailViewController.swift in Sources */,
 				89BA124220CD9480003FCCCA /* MasterViewController.swift in Sources */,
+				89BA127420CD9DD0003FCCCA /* Person.swift in Sources */,
 				89BA124020CD9480003FCCCA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,9 +532,11 @@
 		};
 		89BA126720CD9481003FCCCA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C771F0E04D974E5088AF0ED /* Pods-kBook_X.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3NPUYTQV3T;
 				INFOPLIST_FILE = kBook_X/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -449,9 +551,11 @@
 		};
 		89BA126820CD9481003FCCCA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12E2187F2BC5F70E40037436 /* Pods-kBook_X.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3NPUYTQV3T;
 				INFOPLIST_FILE = kBook_X/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -466,6 +570,7 @@
 		};
 		89BA126A20CD9481003FCCCA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DAD1B69F1AA985C8F264558 /* Pods-kBook_XTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -486,6 +591,7 @@
 		};
 		89BA126B20CD9481003FCCCA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C05E74623EBDAFD3781A262A /* Pods-kBook_XTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -506,6 +612,7 @@
 		};
 		89BA126D20CD9481003FCCCA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 985DB010B262D4B0202C856F /* Pods-kBook_XUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -525,6 +632,7 @@
 		};
 		89BA126E20CD9481003FCCCA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB75E8718B7F41255C156443 /* Pods-kBook_XUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

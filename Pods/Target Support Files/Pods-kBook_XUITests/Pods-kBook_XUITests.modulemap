@@ -1,0 +1,6 @@
+framework module Pods_kBook_XUITests {
+  umbrella header "Pods-kBook_XUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module Pods_kBook_X {
+  umbrella header "Pods-kBook_X-umbrella.h"
+
+  export *
+  module * { export * }
+}

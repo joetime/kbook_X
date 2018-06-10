@@ -12,6 +12,7 @@ class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
     var objects = [Any]()
+    var Persons = [Person]()
 
 
     override func viewDidLoad() {
@@ -24,6 +25,28 @@ class MasterViewController: UITableViewController {
         if let split = splitViewController {
             let controllers = split.viewControllers
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
+        }
+        
+        if let path = Bundle.main.path(forResource: "test", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
+                if let jsonResult = jsonResult as? Dictionary<String, AnyObject>, let personArray = jsonResult["person"] as? [Any] {
+                    
+                    // set title
+                    let cnt = personArray.count
+                    self.title = "Persons - " + String (cnt)
+                    
+                    // loop items
+                    for case let pJson in personArray {
+                        let person = try Person(json: pJson as! [String : Any])
+                        Persons.append(person)
+                    }
+                }
+            } catch {
+                // handle error
+                print("Unexpected error: \(error).")
+            }
         }
     }
 
@@ -49,7 +72,7 @@ class MasterViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
-                let object = objects[indexPath.row] as! NSDate
+                let object = Persons[indexPath.row] //as! Person
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
                 controller.detailItem = object
                 controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
@@ -65,14 +88,14 @@ class MasterViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return objects.count
+        return Persons.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
-        let object = objects[indexPath.row] as! NSDate
-        cell.textLabel!.text = object.description
+        let p = Persons[indexPath.row] //as! Person
+        cell.textLabel!.text = p.name //object.description
         return cell
     }
 
