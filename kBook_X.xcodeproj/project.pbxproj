@@ -18,6 +18,9 @@
 		89BA127020CD95CB003FCCCA /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 89BA126F20CD95CB003FCCCA /* Podfile */; };
 		89BA127220CD9D7A003FCCCA /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 89BA127120CD9D7A003FCCCA /* test.json */; };
 		89BA127420CD9DD0003FCCCA /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BA127320CD9DD0003FCCCA /* Person.swift */; };
+		89BA127620CE934D003FCCCA /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BA127520CE934D003FCCCA /* DataStore.swift */; };
+		89BA127820CE9EA0003FCCCA /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BA127720CE9EA0003FCCCA /* Song.swift */; };
+		89BA127A20CEA641003FCCCA /* kbAllData_bk.json in Resources */ = {isa = PBXBuildFile; fileRef = 89BA127920CEA641003FCCCA /* kbAllData_bk.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,9 @@
 		89BA126F20CD95CB003FCCCA /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		89BA127120CD9D7A003FCCCA /* test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
 		89BA127320CD9DD0003FCCCA /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		89BA127520CE934D003FCCCA /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		89BA127720CE9EA0003FCCCA /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		89BA127920CEA641003FCCCA /* kbAllData_bk.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = kbAllData_bk.json; sourceTree = "<group>"; };
 		985DB010B262D4B0202C856F /* Pods-kBook_XUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kBook_XUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kBook_XUITests/Pods-kBook_XUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AB75E8718B7F41255C156443 /* Pods-kBook_XUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kBook_XUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-kBook_XUITests/Pods-kBook_XUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C05E74623EBDAFD3781A262A /* Pods-kBook_XTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kBook_XTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-kBook_XTests/Pods-kBook_XTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +133,7 @@
 		89BA123E20CD9480003FCCCA /* kBook_X */ = {
 			isa = PBXGroup;
 			children = (
+				89BA127920CEA641003FCCCA /* kbAllData_bk.json */,
 				89BA123F20CD9480003FCCCA /* AppDelegate.swift */,
 				89BA124120CD9480003FCCCA /* MasterViewController.swift */,
 				89BA124320CD9480003FCCCA /* DetailViewController.swift */,
@@ -136,6 +143,8 @@
 				89BA124D20CD9481003FCCCA /* Info.plist */,
 				89BA127120CD9D7A003FCCCA /* test.json */,
 				89BA127320CD9DD0003FCCCA /* Person.swift */,
+				89BA127520CE934D003FCCCA /* DataStore.swift */,
+				89BA127720CE9EA0003FCCCA /* Song.swift */,
 			);
 			path = kBook_X;
 			sourceTree = "<group>";
@@ -276,6 +285,7 @@
 				89BA124920CD9481003FCCCA /* Assets.xcassets in Resources */,
 				89BA127220CD9D7A003FCCCA /* test.json in Resources */,
 				89BA127020CD95CB003FCCCA /* Podfile in Resources */,
+				89BA127A20CEA641003FCCCA /* kbAllData_bk.json in Resources */,
 				89BA124720CD9480003FCCCA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,9 +368,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89BA127820CE9EA0003FCCCA /* Song.swift in Sources */,
 				89BA124420CD9480003FCCCA /* DetailViewController.swift in Sources */,
 				89BA124220CD9480003FCCCA /* MasterViewController.swift in Sources */,
 				89BA127420CD9DD0003FCCCA /* Person.swift in Sources */,
+				89BA127620CE934D003FCCCA /* DataStore.swift in Sources */,
 				89BA124020CD9480003FCCCA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

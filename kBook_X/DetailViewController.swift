@@ -11,13 +11,26 @@ import UIKit
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
-
+    @IBOutlet weak var notesLabel: UILabel!
+    
+    var detailItem: Song? {
+        didSet {
+            // Update the view.
+            configureView()
+        }
+    }
 
     func configureView() {
         // Update the user interface for the detail item.
         if let detail = detailItem {
+            self.title = detail.SongTitle + " - " + detail.ArtistName
+            
             if let label = detailDescriptionLabel {
-                label.text = detail.name
+                label.text = detail.Lyrics
+            }
+            
+            if let label = notesLabel {
+                label.text = detail.Notes
             }
         }
     }
@@ -32,14 +45,5 @@ class DetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    var detailItem: Person? {
-        didSet {
-            // Update the view.
-            configureView()
-        }
-    }
-
-
 }
 

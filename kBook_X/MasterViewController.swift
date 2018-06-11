@@ -11,8 +11,9 @@ import UIKit
 class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
-    var objects = [Any]()
-    var Persons = [Person]()
+    //var objects = [Any]()
+    var Songs = [Song]()
+    var kbData = kbDataStore()
 
 
     override func viewDidLoad() {
@@ -27,27 +28,11 @@ class MasterViewController: UITableViewController {
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
         
-        if let path = Bundle.main.path(forResource: "test", ofType: "json") {
-            do {
-                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
-                if let jsonResult = jsonResult as? Dictionary<String, AnyObject>, let personArray = jsonResult["person"] as? [Any] {
-                    
-                    // set title
-                    let cnt = personArray.count
-                    self.title = "Persons - " + String (cnt)
-                    
-                    // loop items
-                    for case let pJson in personArray {
-                        let person = try Person(json: pJson as! [String : Any])
-                        Persons.append(person)
-                    }
-                }
-            } catch {
-                // handle error
-                print("Unexpected error: \(error).")
-            }
-        }
+        // reads from json and sets title
+        kbData.load()
+        Songs = kbData.Songs
+        
+        self.title = "Songs (" + String(Songs.count) + ")"
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -62,9 +47,15 @@ class MasterViewController: UITableViewController {
 
     @objc
     func insertNewObject(_ sender: Any) {
-        objects.insert(NSDate(), at: 0)
-        let indexPath = IndexPath(row: 0, section: 0)
-        tableView.insertRows(at: [indexPath], with: .automatic)
+        
+//        Persons.insert(Person(_name:"Test2222", _age: "9", _employed: "Yes"), at: 0)
+//        let indexPath = IndexPath(row: 0, section: 0)
+//        tableView.insertRows(at: [indexPath], with: .automatic)
+//
+//        let DATA = kbDataStore(persons:Persons)
+//        DATA.save()
+//        let personsTest = DATA.load()
+//        print(personsTest)
     }
 
     // MARK: - Segues
@@ -72,7 +63,7 @@ class MasterViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
-                let object = Persons[indexPath.row] //as! Person
+                let object = Songs[indexPath.row] //as! Person
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
                 controller.detailItem = object
                 controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
@@ -88,14 +79,14 @@ class MasterViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Persons.count
+        return Songs.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
-        let p = Persons[indexPath.row] //as! Person
-        cell.textLabel!.text = p.name //object.description
+        let p = Songs[indexPath.row] //as! Person
+        cell.textLabel!.text = p.SongTitle //object.description
         return cell
     }
 
@@ -106,7 +97,7 @@ class MasterViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            objects.remove(at: indexPath.row)
+            Songs.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
